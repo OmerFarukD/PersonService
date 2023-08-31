@@ -16,8 +16,8 @@ public class PersonController : Controller
     public IActionResult GetAll()
     {
         var persons = _personRepository
-            .GetAll();
-
+            //.GetAll();
+            .GetAllByPersonOfAgeRange(20,25);
         return View(persons);
     }
 
